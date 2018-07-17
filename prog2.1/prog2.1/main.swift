@@ -12,8 +12,10 @@ var u: Fraction
 
 u = Fraction(num: 2, den: 3)
 
-print("u=\(u.num)/\(u.den)")
+print("u=\(u.description)")
+print("decimal value of u=\(u.decimal)")
 
 var x: Fraction = Fraction(num: -5)
 
-print("x=\(x.num)/\(x.den)")
+print("x=\(x.description)")
+print("decimal value of x=\(x.decimal)")
