@@ -64,4 +64,21 @@ class Fraction{
     convenience init() {
         self.init(num: 0, den: 1)
     }
+    
+    // METHODS
+    
+    func add(_ f : Fraction) -> Fraction {
+        return Fraction(num: self.num*f.den + self.den*f.num, den: self.den*f.den)
+    }
+    
+    func subtract(_ f: Fraction) -> Fraction {
+        return Fraction(num: self.num*f.den - self.den*f.num, den: self.den*f.den)
+    }
+    
+    func multiply(_ f: Fraction) -> Fraction {
+        return Fraction(num: self.num*f.num, den: self.den*f.den)
+    }
+    func divide(_ f: Fraction) -> Fraction {
+        return Fraction(num: self.num*f.den, den: self.den*f.num)
+    }
 }
