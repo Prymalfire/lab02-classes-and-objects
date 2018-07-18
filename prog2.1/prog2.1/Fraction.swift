@@ -81,4 +81,53 @@ class Fraction{
     func divide(_ f: Fraction) -> Fraction {
         return Fraction(num: self.num*f.den, den: self.den*f.num)
     }
+    
+    /**
+     Add a fraction to fraction.
+     
+     - parameter f1: Fraction to add to
+     - parameter f2: Fraction to be added
+     
+     - returns: The result of f1 + f2.
+     */
+    static func add(_ f1: Fraction, to f2: Fraction) -> Fraction {
+        return Fraction(num: f1.num*f2.den + f1.den*f2.num,
+                        den: f1.den*f2.den)
+    }
+    
+    /**
+     Subtract a fraction from fraction.
+     
+     - parameter f1: Fraction to subtract
+     - parameter f2: Fraction to subtract from
+     
+     - returns: The result of f2 - f1.
+     */
+    static func subtract(_ f1: Fraction, from f2: Fraction) -> Fraction {
+        return f2.subtract(f1);
+    }
+    
+    /**
+     Multiply a fraction by fraction.
+     
+     - parameter f1: Fraction to multiply
+     - parameter f2: Fraction to multiply by
+     
+     - returns: The result of f1*f2.
+     */
+    static func multiply(_ f1: Fraction, by f2: Fraction) -> Fraction {
+        return f1.multiply(f2)
+    }
+    
+    /**
+     Divide a fraction by fraction.
+     
+     - parameter f1: Fraction to divide
+     - parameter f2: Fraction to divide by
+     
+     - returns: The result of f1/f2.
+     */
+    static func divide(_ f1: Fraction, by f2: Fraction) -> Fraction {
+        return f1.divide(f2)
+    }
 }
